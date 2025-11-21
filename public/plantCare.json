@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Snake Plant",
+        "light": "Low – Medium indirect light",
+        "water": "Every 2-3 weeks",
+        "soil": "Well-draining sandy soil",
+        "humidity": "Low"
+    },
+    {
+        "id": 2,
+        "name": "Monstera",
+        "light": "Bright indirect light",
+        "water": "Every 1-2 weeks",
+        "soil": "Peat-based well draining",
+        "humidity": "Medium – High"
+    },
+    {
+        "id": 3,
+        "name": "Aloe Vera",
+        "light": "Bright direct or indirect light",
+        "water": "Every 3 weeks (let soil dry)",
+        "soil": "Cactus/Succulent mix",
+        "humidity": "Low"
+    },
+    {
+        "id": 4,
+        "name": "Peace Lily",
+        "light": "Medium indirect light",
+        "water": "Weekly",
+        "soil": "Moist, rich soil",
+        "humidity": "High"
+    },
+    {
+        "id": 5,
+        "name": "Spider Plant",
+        "light": "Bright indirect light",
+        "water": "Every 1-2 weeks",
+        "soil": "Well draining potting mix",
+        "humidity": "Medium"
+    }
+]

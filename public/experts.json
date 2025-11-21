@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Dr. Maya Reynolds",
+        "title": "Indoor Plant Specialist",
+        "photo": "https://plus.unsplash.com/premium_photo-1673957923985-b814a9dbc03d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+    },
+    {
+        "id": 2,
+        "name": "Jonathan Pierce",
+        "title": "Tropical Plant Researcher",
+        "photo": "https://images.unsplash.com/photo-1631203883080-9e5338ebcf2d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc2VhcmNoZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+    },
+    {
+        "id": 3,
+        "name": "Aisha Patel",
+        "title": "Plant Disease Expert",
+        "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+    },
+    {
+        "id": 4,
+        "name": "Carlos Ortiz",
+        "title": "Soil & Fertilizer Consultant",
+        "photo": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+    },
+    {
+        "id": 5,
+        "name": "Emma Sinclair",
+        "title": "Succulent & Cactus Specialist",
+        "photo": "https://plus.unsplash.com/premium_photo-1669703777437-27602d656c27?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+    }
+]
