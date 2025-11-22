@@ -1,11 +1,14 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from './Provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
 
-    const { createUser, googleSignIn, passReset, setForgetPass, forgetPass } = use(AuthContext)
+    const { createUser, googleSignIn  } = use(AuthContext)
+
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const HandleLogin = (e) => {
         e.preventDefault();
@@ -13,8 +16,14 @@ const Login = () => {
         const password = e.target.password.value;
         // console.log(createUser)
         createUser(email, password)
-            .then(res => {
-                console.log(res.user)
+            .then(() => {
+                  navigate(`${location.state ?
+                    location.state
+                    : 
+                    '/'
+                }`)
+                // console.log(res.user)
+                
             })
             .catch(error => {
                 const errorCode = error.code;
@@ -23,15 +32,7 @@ const Login = () => {
                 toast(errorMessage);
             })
 
-        if (forgetPass) {
-            passReset(email)
-                .then(toast("Password reset email sent."))
-                .catch(error => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    console.log({ errorMessage, errorCode })
-                })
-        }
+        
     }
 
     const handleGoogleLogin = () => {
@@ -47,10 +48,7 @@ const Login = () => {
 
     }
 
-    // const handlePassReset = () => {
-
-
-    // }
+    
     return (
         <div className="hero bg-base-200 ">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -63,7 +61,7 @@ const Login = () => {
                             <input name='email' type="email" className="input" placeholder="Email" />
                             <label className="label">Password</label>
                             <input name='password' type="password" className="input" placeholder="Password" />
-                            <div><a onClick={() => { setForgetPass(true) }} className="link link-hover">Forgot password?</a></div>
+                            <div><Link to="/auth/login/forget"  className="link link-hover">Forgot password?</Link ></div>
                             <button type='submit' className="btn btn-neutral mt-4">Login</button>
                         </form>
                         <button onClick={handleGoogleLogin} className="btn bg-white text-black border-[#e5e5e5]">

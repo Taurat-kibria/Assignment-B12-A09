@@ -5,6 +5,10 @@ import PlantDetails from "../components/PlantDetails";
 import Login from "../components/Login";
 import Resgistration from "../components/Resgistration";
 import AuthLayout from "../components/AuthLayout";
+import ForgetEmail from "../components/ForgetEmail";
+import ProtectedPlant from "../components/protected/ProtectedPlant";
+import DetailsLayout from "../Layouts/DetailsLayout";
+import PrivateRoute from "../components/protected/PrivateRoute";
 
 
 
@@ -32,22 +36,34 @@ export const router = createBrowserRouter([
                 element: <Login></Login>
             },
             {
+                path: "/auth/login/forget",
+                element: <ForgetEmail></ForgetEmail>
+            },
+            {
                 path: "/auth/registration",
                 element: <Resgistration></Resgistration>
             },
+
         ]
     },
     {
         path: "/myProfile",
         element: <div>my profile</div>
     },
-    {
-        path: "/plants/:id",
-        element: <PlantDetails></PlantDetails>
-    },
+
+
+
     {
         path: '/plants',
-        element: <div>plants section</div>
+        element: <div>plants section</div>,
+
+    },
+    {
+        path: "/details/:id",
+        loader: () => fetch("/plants.json"),
+        element: <PrivateRoute>
+            <DetailsLayout></DetailsLayout>
+        </PrivateRoute>
     },
     {
         path: "/*",

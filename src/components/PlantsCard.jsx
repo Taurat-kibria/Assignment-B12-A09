@@ -1,9 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate,  } from 'react-router';
 
 const PlantsCard = ({ data }) => {
+
+    
+        const Navigate = useNavigate();
+        
+    
+
     return (
-        <div className="flex justify-center items-center   p-4">
+        <div onClick={()=>Navigate(`/details/${data.plantId}`)} className="flex justify-center items-center   p-4">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-4 pt-4">
                     <img
@@ -53,7 +59,7 @@ const PlantsCard = ({ data }) => {
                         <div className="text-3xl font-bold text-primary">
                             ${data.price}
                         </div>
-                        <button className="btn btn-primary">Add to Cart</button>
+                        <Link  className="btn btn-primary">Add to Cart</Link >
                     </div>
                 </div>
             </div>
